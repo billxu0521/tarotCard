@@ -1,133 +1,87 @@
+
 <template>
-  <div class="common-layout">
-    <el-container>
-      <el-main class="card-container">
-
-        <el-row style="overflow: auto;padding-bottom: 5%;padding-top: 1%;">
-          選牌區:
-          <el-col style="height: 200px;position: relative;">
-            <div class="tarot-card" :style="{ left:20 * i + `px` }" v-for="(card,i) in data.card" @click="selectCard(i)" :key="i">{{card.name}}</div>
-          </el-col>
-        </el-row>
-
-
-        鑽石牌陣
-        <el-row>
-          <el-col :span="8"></el-col>
-          <el-col :span="8">
-            <div class="cardarry box-card">
-              結果:
-              <div class="cardselect" v-if="data.select[0] != null" @click="removeCard(0)">{{data.select[0].name}} </div>
-            </div>
-          </el-col>
-          <el-col :span="8"></el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="8">
-            <div class="cardarry box-card">
-              內心掙扎:
-              <div class="cardselect" v-if="data.select[1] != null" @click="removeCard(1)">{{data.select[1].name}}</div>
-            </div>
-          </el-col>
-          <el-col :span="8">
-            <div class="cardarry box-card">
-              核心問題:
-              <div class="cardselect" v-if="data.select[2] != null" @click="removeCard(2)">{{data.select[2].name}}</div>
-            </div>
-          </el-col>
-          <el-col :span="8">
-            <div class="cardarry box-card">
-              外部紛擾:
-              <div class="cardselect" v-if="data.select[3] != null" @click="removeCard(3)">{{data.select[3].name}}</div>
-            </div>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="8"><div class="grid-content ep-bg-purple" /></el-col>
-          <el-col :span="8">
-            <div class="cardarry box-card">
-              建議:
-              <div class="cardselect" v-if="data.select[4] != null" @click="removeCard(4)">{{data.select[4].name}}</div>
-            </div>
-          </el-col>
-          <el-col :span="8"><div class="grid-content ep-bg-purple" /></el-col>
-        </el-row>
-
-
-       
-      </el-main>
-    </el-container>
+  <div class="container mx-auto ">
+    <div class="grid grid-cols-3 gap-2 h-screen">
+      <div></div>
+      <single-card @click="openCardModal(0)" :filedtitle="'1.結果'" :sort="0"></single-card>
+      <div></div>
+      <single-card @click="openCardModal(1)" :filedtitle="'2.內心掙扎'" :sort="1"></single-card>
+      <single-card @click="openCardModal(2)" :filedtitle="'3.核心問題'" :sort="2"></single-card>
+      <single-card @click="openCardModal(3)" :filedtitle="'4.外部紛擾'" :sort="3"></single-card>
+      <div></div>
+      <single-card @click="openCardModal(4)" :filedtitle="'5.建議'" :sort="4"></single-card>
+      <div></div>
+    </div>
+    <!-- <Button class="rounded-full" @click="openCardModal" >抽牌</Button> -->
+    <modal :open="isOpen" :sort="selectSort" @close="isOpen = !isOpen">
+  </modal>
   </div>
 </template>
 
 <script>
-import { reactive,onMounted,defineComponent } from 'vue';
+import { inject,reactive,onMounted,defineComponent,ref } from 'vue';
 import cardData from "../data/data.json";
+import SingleCard  from '../components/SingleCard.vue';
+import Modal  from '../components/Modal.vue';
+import Button from '../components/Button.vue';
 
 export default defineComponent({
   name: 'BasicCard',
-  setup() {
-  const data = reactive({
-    card:'',
-    select:[]
-  });
-  //等基本DOM渲染後再讀資料
-  onMounted(() => {
-    console.log(cardData)  
-    data.card = cardData.tarot
-      
-  });
-  
-  return {
-    data,
-    cardData
-    };
+  components: { 
+    SingleCard,
+    Modal,
+    Button
   },
-  methods: {
-    selectCard(i) {
-      if ((this.data.select).length >  5)  return;
-      (this.data.select).push(this.data.card[i])
-      this.data.card.splice(i, 1); 
-      
-      console.log(this.data.select)
+  theme: {
+    container: {
+      center: true,
     },
-    removeCard(i){
-      if ((this.data.select).length == 0)  return;
-      (this.data.card).push(this.data.select[i])
-      this.data.select.splice(i, 1); 
+  },
+  setup() {
+    const mapStore = inject("mapStore");
+    const { state, setAllCurrentCard} = mapStore;
+
+    const data = reactive({
+      allCard:'',
+      selectedCard:[],
+    });
+
+    const selectSort = ref(0)
+    const isOpen = ref(false)
+
+    const openCardModal = (sort) =>{
+      //if((state.selectedCard).length > 4) return
+      if(state.selectedCard[sort] != '') return
+      isOpen.value = !isOpen.value;
+      selectSort.value = sort
+      console.log(selectSort)
+    }
+
+    //等基本DOM渲染後再讀資料
+    onMounted(() => {
+      console.log(cardData)  
+      data.allCard = cardData.tarot
+      setAllCurrentCard(cardData.tarot)
+      console.log(state.currentCard)  
+    });
+    
+    return {
+      data,
+      cardData,
+      isOpen,
+      selectSort,
+      openCardModal,
+      
     }
   },
+  
 })
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.cardarry{
-  border-style:groove;
-  margin: auto;
-  height: 100%;
-  width: 100%;
-}
 
-.tarot-card{
-  position:absolute;
-  height: 200px;
-  width: 150px;
-  background-image: url('../assets/hxt9hEx.png');
-  background-size: cover;
-  
-}
-
-.tarot-card:hover{
-  top:-30px;
-}
-
-.cardselect{
-  height: 200px;
-  width: 150px;
-  background-image: url('../assets/hxt9hEx.png');
-  background-size: cover;
-  margin: auto;
-}
 
 </style>
+
+
