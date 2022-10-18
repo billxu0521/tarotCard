@@ -1,7 +1,7 @@
 import { reactive, readonly } from "vue";
 
 const state = reactive({
-  selectedCard : ['','','','',''],
+  selectedCard : ['','','','','','','','','','','','',''],
   currentCard : [],
 });
 
