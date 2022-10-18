@@ -23,8 +23,8 @@ export default defineComponent({
 
 <template>
   
-  <Button class="rounded-full" @click="goToPage('diamondcard')"><a href="">鑽石牌陣</a></Button>
-  <Button class="rounded-full" @click="goToPage('selectcard')"><a href="">選擇牌陣</a></Button>
+  <Button class="rounded-full" @click="goToPage('diamondcard')">鑽石牌陣</Button>
+  <Button class="rounded-full" @click="goToPage('selectcard')">選擇牌陣</Button>
 
 </template>
 
