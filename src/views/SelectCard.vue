@@ -1,24 +1,25 @@
 
 <template>
   <div class="container mx-auto ">
+    <button @click="reDeal" title=""
+      class="fixed z-90 bottom-10 right-8 bg-blue-600 w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-xl ">
+      重新翻牌
+    </button>
     <div class="grid grid-cols-3 gap-2 h-screen">
-      
-      <single-card @click="openCardModal(0)" :isFlop="data.isFlop[0]" :filedtitle="'結果'" :sort="0"></single-card>
+      <single-card :filedtitle="'結果'" :sort="0"></single-card>
       <div ></div>
-      <single-card @click="openCardModal(1)" :isFlop="data.isFlop[1]" :filedtitle="'過程'" :sort="1"></single-card>
-      <single-card @click="openCardModal(2)" :isFlop="data.isFlop[2]" :filedtitle="'結果'" :sort="2"></single-card>
+      <single-card :filedtitle="'過程'" :sort="1"></single-card>
+      <single-card :filedtitle="'結果'" :sort="2"></single-card>
       <div></div>
-      <single-card @click="openCardModal(3)" :isFlop="data.isFlop[3]" :filedtitle="'過程'" :sort="3"></single-card>
+      <single-card :filedtitle="'過程'" :sort="3"></single-card>
       <div class="text-center">A.選項</div>
-      <single-card @click="openCardModal(4)" :isFlop="data.isFlop[4]" :filedtitle="'結果'" :sort="4"></single-card>
+      <single-card :filedtitle="'結果'" :sort="4"></single-card>
       <div class="text-center">B.選項</div>
     </div>
     <!-- <Button class="rounded-full" @click="openCardModal" >抽牌</Button> -->
     <!-- <modal :open="isOpen" :sort="selectSort" @close="isOpen = !isOpen"> -->
   <!-- </modal> -->
   </div>
-
-  
   
 </template>
 
@@ -26,13 +27,11 @@
 import { inject,reactive,onMounted,defineComponent,ref } from 'vue';
 import cardData from "../data/data.json";
 import SingleCard  from '../components/SingleCard.vue';
-import Button from '../components/Button.vue';
 
 export default defineComponent({
   name: 'SelectCard',
   components: { 
     SingleCard,
-    Button
   },
   theme: {
     container: {
@@ -43,31 +42,20 @@ export default defineComponent({
     const mapStore = inject("mapStore");
     const { state, setCurrentCard, setAllCurrentCard, addSelectCard} = mapStore;
     const data = reactive({
-      allCard:'',
       selectedCard:[],
-      isFlop:[false,false,false,false,false],
     });
 
     
     const selectSort = ref(0)
     const isOpen = ref(false)
 
-    const openCardModal = (sort) =>{
-      //if((state.selectedCard).length > 4) return
-      //if(state.selectedCard[sort] != '') return
-      //isOpen.value = !isOpen.value;
-      //selectSort.value = sort
-      //console.log(selectSort)
-      data.isFlop[sort] = true
-      console.log(data.isFlop[sort])
-      
-    }
     const createSeed = () => {
       let max = (state.currentCard).length
       let seed = Math.floor(Math.random() * max);
       return seed
     }
 
+    //發牌
     const dealAllCard = () => {
       for (let index = 0; index < 5; index++) {
         let seed = createSeed()
@@ -78,17 +66,15 @@ export default defineComponent({
       }
     }
 
-
+    const reDeal = () => {
+      location.reload();
+    }
 
     //等基本DOM渲染後再讀資料
     onMounted(() => {
-      console.log(cardData)  
       data.allCard = cardData.tarot
       setAllCurrentCard(cardData.tarot)
-      console.log(state.currentCard)  
       dealAllCard()
-      console.log(state.selectedCard)  
-      //直接抽五張
 
     });
     
@@ -96,9 +82,8 @@ export default defineComponent({
       data,
       cardData,
       isOpen,
-      selectSort,
-      openCardModal,
-      
+      selectSort,  
+      reDeal    
     }
   },
   

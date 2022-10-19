@@ -3,7 +3,7 @@ import Button from '../components/Button.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Home',
+  name: 'ChiocePage',
   components: {
     Button
   },
@@ -22,9 +22,17 @@ export default defineComponent({
 </script>
 
 <template>
+  
+  
   <div class="container mx-auto px-4 my-20 flex flex-col items-center">
-    <Button class="rounded-full my-4 " @click="goToPage('chiocepage')">選擇何種牌陣</Button>
-    <Button class="rounded-full my-4" @click="goToPage('question')">如果你不知道自己要選哪個牌陣...</Button>
+    
+    <Button class="rounded-full my-4" @click="goToPage('diamondcard')">鑽石牌陣</Button>
+    <Button class="rounded-full my-4" @click="goToPage('selectcard')">選擇牌陣</Button>
+    <Button class="rounded-full my-4" >時間之流</Button>
+    <Button class="rounded-full my-4" >關係牌陣</Button>
+
+    <Button class="rounded-full my-4" @click="goToPage('')">返回</Button>
+
   </div>  
 </template>
 

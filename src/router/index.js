@@ -7,6 +7,16 @@ const routes = [
     component: Home,
   },
   {
+    path: '/chiocepage',
+    name: 'ChiocePage',
+    component: () => import('../views/ChiocePage.vue'),
+  },
+  {
+    path: '/question',
+    name: 'Question',
+    component: () => import('../views/Question.vue'),
+  },
+  {
     path: '/diamondcard',
     name: 'DiamondCard',
     component: () => import('../views/DiamondCard.vue'),
