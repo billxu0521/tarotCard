@@ -4,13 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Vue</title>
+    <title>塔羅線上抽牌</title>
   </head>
   <body class="bg-gradient-to-b relative h-full bg-[#012966]">
-    <div class="absolute top-0 left-0">左上</div>
-    <div class="absolute top-0 right-0">右上</div>
-    <div class="absolute bottom-0 left-0">左下</div>
-    <div class="absolute bottom-0 right-0">右上</div>
+    <div class="absolute -top-2 -left-2 ">        
+      <img class="h-20 w-20 -rotate-90" src="../src/assets/bg-2.png" alt=""/>
+    </div>
+    <div class="absolute -top-2 -right-2">
+      <img class="h-20 w-20 rotate-0" src="../src/assets/bg-2.png" alt=""/>
+    </div>
+    <div class="absolute -bottom-2 -left-2">
+      <img class="h-20 w-20 -rotate-180" src="../src/assets/bg-2.png" alt=""/>
+    </div>
+    <div class="absolute -bottom-2 -right-2">
+      <img class="h-20 w-20 rotate-90" src="../src/assets/bg-2.png" alt=""/>
+    </div>
     <div id="app" class="bg-gradient-to-b m-2 bg-[#F4E9D3]"></div>
     
     <script type="module" src="/src/main.js"></script>
