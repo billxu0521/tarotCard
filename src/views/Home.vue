@@ -22,6 +22,18 @@ export default defineComponent({
 </script>
 
 <template>
+  <div class="absolute -top-2 -left-2 ">        
+    <img class="h-20 w-20 -rotate-90" src="../assets/bg-2.png" alt=""/>
+  </div>
+  <div class="absolute -top-2 -right-2">
+    <img class="h-20 w-20 rotate-0" src="../assets/bg-2.png" alt=""/>
+  </div>
+  <div class="absolute -bottom-2 -left-2">
+    <img class="h-20 w-20 -rotate-180" src="../assets/bg-2.png" alt=""/>
+  </div>
+  <div class="absolute -bottom-2 -right-2">
+    <img class="h-20 w-20 rotate-90" src="../assets/bg-2.png" alt=""/>
+  </div>
   <div class="container h-screen flex flex-col justify-center item-center mx-auto">
     <div class="flex flex-row justify-around items-center ">
       <div class="flex flex-col items-center ">
