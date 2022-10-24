@@ -1,6 +1,6 @@
 
 <template>
-  <div class="row-span-3">
+  <div class="col-span-2">
   <div class="grid grid-cols-3 gap-2 h-min	h-[70vh]">
     <single-card :filedtitle="'結果'" :sort="0"></single-card>
     <div ></div>
@@ -13,7 +13,7 @@
     <div class="text-center">B.選項</div>
   </div>
 </div>
-<div class="row-span-3">
+<div class="col-span-1">
   <div class="flex flex-col justify-center item-center h-full">
   <div>
     關係牌陣用於得知別人如何看自己，以及打算如何對待你，還有未來的發展或相處情形。
