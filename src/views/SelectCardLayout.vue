@@ -29,10 +29,7 @@
        
             <diamond-card-layout v-if="componentController['diamondcard']" :key="componentKey" ></diamond-card-layout>
             <chioce-card-layout v-else-if="componentController['chiocercard']" :key="componentKey" ></chioce-card-layout>
-         
-        
-       
-
+  
       <div class="flex flex-row justify-center p-10">
         <button
         @click="reDeal"

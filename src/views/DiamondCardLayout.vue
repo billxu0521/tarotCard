@@ -3,7 +3,7 @@
 
 <div class="pt-20 grid md:grid-flow-col-dense md:grid-cols-3 md:grid-rows-3 gap-4">
   <div class="col-span-1 md:row-span-3 md:col-span-2 ">
-    <div class="grid grid-cols-3 gap-2 h-min	h-[70vh]">
+    <div class="grid grid-cols-3 gap-2 h-[70vh]">
       <div></div>
       <single-card :filedtitle="'結果'" :sort="0"></single-card>
       <div></div>
