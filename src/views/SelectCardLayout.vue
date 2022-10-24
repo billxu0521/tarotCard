@@ -26,7 +26,7 @@
       
     </div>
     <div id="select" class="h-screen flex flex-col justify-between item-center h-screen">
-      <div class="py-10 flex flex-row justify-center ">
+      <div class="py-10 grid grid-cols-1 md:grid-cols-3 gap-4">
        
             <diamond-card-layout v-if="componentController['diamondcard']" :key="componentKey" ></diamond-card-layout>
             <chioce-card-layout v-else-if="componentController['chiocercard']" :key="componentKey" ></chioce-card-layout>
