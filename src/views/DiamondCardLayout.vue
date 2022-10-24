@@ -1,8 +1,8 @@
 
 <template>
 
-<div class="py-20 grid md:grid-flow-col-dense md:grid-cols-3 md:grid-rows-3 gap-4">
-  <div class="col-span-1 md:row-span-3 md:col-span-2 h-[70vh]">
+<div class="pt-20 grid md:grid-flow-col-dense md:grid-cols-3 md:grid-rows-3 gap-4">
+  <div class="col-span-1 md:row-span-3 md:col-span-2 ">
     <div class="grid grid-cols-3 gap-2 h-min	h-[70vh]">
       <div></div>
       <single-card :filedtitle="'結果'" :sort="0"></single-card>
@@ -16,7 +16,7 @@
     </div>
 
   </div>
-  <div class="col-span-1  md:col-span-1 h-[30vh] md:relative">
+  <div class="col-span-1  md:col-span-1 md:relative">
     <div class="text-xl md:absolute md:bottom-0">
       <div>關係牌陣用於得知別人如何看自己，以及打算如何對待你，還有未來的發展或相處情形。</div>
     </div>
