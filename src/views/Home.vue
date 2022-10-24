@@ -12,11 +12,12 @@ export default defineComponent({
       console.log(url)
       window.location.href =  '/'+url;
     }
-    
+ 
     return {
       goToPage,
     };
   },
+  
 })
 
 </script>
@@ -93,7 +94,7 @@ export default defineComponent({
   </div>
   <div class="container mx-auto md:container md:mx-auto sm:container sm:mx-auto h-min md:h-screen   grid grid-cols-1 md:grid-cols-2 gap-4 text-center " >
       <div>
-        <div class="text-5xl mt-20 hover:text-[#FFDB72]" @click="goToPage('selectcard')">選擇牌陣</div>
+        <div class="text-5xl mt-20 hover:text-[#FFDB72] hover:cursor-pointer" @click="goToPage('divination/chiocercard')">選擇牌陣</div>
         <div class="flex flex-row justify-around">
           <div  class=" pb-30">
             <img class="w-40 pb-30" src="../assets/image-2-1.png" alt=""/>
@@ -109,7 +110,7 @@ export default defineComponent({
       </div>
       <div>
         <div class="flex flex-row justify-around">
-          <div class="text-5xl mt-20 hover:text-[#FFDB72]" @click="goToPage('diamondcard')">鑽石牌陣</div>
+          <div class="text-5xl mt-20 hover:text-[#FFDB72] hover:cursor-pointer" @click="goToPage('divination/diamondcard')">鑽石牌陣</div>
           <div  class=" ">
             <img class="w-40" src="../assets/image-2-4.png" alt=""/>
           </div>

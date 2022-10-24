@@ -16,15 +16,11 @@ const routes = [
     name: 'Question',
     component: () => import('../views/Question.vue'),
   },
+
   {
-    path: '/diamondcard',
-    name: 'DiamondCard',
-    component: () => import('../views/DiamondCard.vue'),
-  },
-  {
-    path: '/selectcard',
-    name: 'SelectCard',
-    component: () => import('../views/SelectCard.vue'),
+    path: '/divination/:page',
+    name: 'Divination',
+    component: () => import('../views/SelectCardLayout.vue'),
   },
   
 ] 

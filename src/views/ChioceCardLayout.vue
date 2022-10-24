@@ -1,25 +1,33 @@
 
 <template>
-  <div class="container mx-auto ">
-    <button @click="reDeal" title=""
-      class="fixed z-90 bottom-10 right-8 bg-blue-600 w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-xl ">
-      重新翻牌
-    </button>
-    <div class="grid grid-cols-3 gap-2 h-screen">
-      <single-card :filedtitle="'結果'" :sort="0"></single-card>
-      <div ></div>
-      <single-card :filedtitle="'過程'" :sort="1"></single-card>
-      <single-card :filedtitle="'結果'" :sort="2"></single-card>
-      <div></div>
-      <single-card :filedtitle="'過程'" :sort="3"></single-card>
-      <div class="text-center">A.選項</div>
-      <single-card :filedtitle="'結果'" :sort="4"></single-card>
-      <div class="text-center">B.選項</div>
-    </div>
-    <!-- <Button class="rounded-full" @click="openCardModal" >抽牌</Button> -->
-    <!-- <modal :open="isOpen" :sort="selectSort" @close="isOpen = !isOpen"> -->
-  <!-- </modal> -->
+  <div class="basis-2/3 ">
+  <div class="grid grid-cols-3 gap-2 h-min	h-[70vh]">
+    <single-card :filedtitle="'結果'" :sort="0"></single-card>
+    <div ></div>
+    <single-card :filedtitle="'過程'" :sort="1"></single-card>
+    <single-card :filedtitle="'結果'" :sort="2"></single-card>
+    <div></div>
+    <single-card :filedtitle="'過程'" :sort="3"></single-card>
+    <div class="text-center">A.選項</div>
+    <single-card :filedtitle="'結果'" :sort="4"></single-card>
+    <div class="text-center">B.選項</div>
   </div>
+</div>
+<div class="basis-1/3">
+  <div class="flex flex-col justify-center item-center h-full">
+  <div>
+    關係牌陣用於得知別人如何看自己，以及打算如何對待你，還有未來的發展或相處情形。
+      <div>1. 對方對你的看法：對方如何看待你</div>
+      <div>2. 過去：一直以來你們相處的狀況，可做為其他牌面解讀的參考</div>
+      <div>3. 現在：目前雙方相處的狀況，若是負面牌，也可視為目前雙方遇到的問題</div>
+      <div>4. 未來：目前狀況繼續發展下去，兩人之間的關係狀況</div>
+      <div>5. 對方目前想採取的作法：對方目前為止判斷你的方式讓他之後想要如何與你相處</div>
+    </div>
+    
+  </div>
+</div>
+      
+  
   
 </template>
 
@@ -29,7 +37,7 @@ import cardData from "../data/data.json";
 import SingleCard  from '../components/SingleCard.vue';
 
 export default defineComponent({
-  name: 'SelectCard',
+  name: 'ChioceCardLayout',
   components: { 
     SingleCard,
   },
