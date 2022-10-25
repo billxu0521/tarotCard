@@ -3,16 +3,16 @@
     <div class="col-span-1 md:row-span-3 md:col-span-2 h-[80vh]">
       <div class="grid grid-cols-4 mb-5">
         <div></div>
-        <single-card :filedtitle="'過去'" :sort="0"></single-card>
-        <single-card :filedtitle="'現在'" :sort="1"></single-card>
+        <single-card :filedtitle="'對方對你的看法'" :sort="0"></single-card>
+        <single-card :filedtitle="'對方對你的看法'" :sort="1"></single-card>
         <div></div>
       </div>
       <div class="grid grid-cols-3  ">
-        <single-card :filedtitle="'未來'" :sort="2"></single-card>
-        <single-card :filedtitle="'對方對你的看法'" :sort="3"></single-card>
-        <single-card :filedtitle="'對方目前想採取的作法'" :sort="4"></single-card>
+        <single-card :filedtitle="'過去'" :sort="2"></single-card>
+        <single-card :filedtitle="'現在'" :sort="3"></single-card>
+        <single-card :filedtitle="'未來'" :sort="4"></single-card>
         <div></div>
-        <single-card :filedtitle="''" :sort="5"></single-card>
+        <single-card :filedtitle="'對方要採取的作法'" :sort="5"></single-card>
         
       </div>
   
