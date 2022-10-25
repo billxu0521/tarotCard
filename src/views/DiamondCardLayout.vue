@@ -1,9 +1,8 @@
 
 <template>
-
 <div class="pt-20 grid md:grid-flow-col-dense md:grid-cols-3 md:grid-rows-3 gap-4">
   <div class="col-span-1 md:row-span-3 md:col-span-2 ">
-    <div class="grid grid-cols-3 gap-2 h-[70vh]">
+    <div class="grid grid-cols-3 gap-2 h-[80vh] ">
       <div></div>
       <single-card :filedtitle="'結果'" :sort="0"></single-card>
       <div></div>
@@ -17,17 +16,17 @@
 
   </div>
   <div class="col-span-1  md:col-span-1 md:relative">
-    <div class="text-xl md:absolute md:bottom-0">
-      <div>關係牌陣用於得知別人如何看自己，以及打算如何對待你，還有未來的發展或相處情形。</div>
+    <div class="text-xl md:text-2xl md:absolute md:bottom-0">
+      <div>鑽石牌陣用於確認單一事件的核心問題與尋找解決方法。</div>
     </div>
   </div>
-  <div class="col-span-1  md:row-span-2 md:col-span-1">
+  <div class="col-span-1  md:row-span-2 md:col-span-1 text-base md:text-lg subpixel-antialiased font-light">
     <div>
-        <div>1. 對方對你的看法：對方如何看待你</div>
-        <div>2. 過去：一直以來你們相處的狀況，可做為其他牌面解讀的參考</div>
-        <div>3. 現在：目前雙方相處的狀況，若是負面牌，也可視為目前雙方遇到的問題</div>
-        <div>4. 未來：目前狀況繼續發展下去，兩人之間的關係狀況</div>
-        <div>5. 對方目前想採取的作法：對方目前為止判斷你的方式讓他之後想要如何與你相處</div>
+        <div>1. 核心問題：你想問的事件最主要面對的問題是什麼，我們在對事情感到困惑的時候，常常會因為注意細節而忽略最重要的問題，這張牌會告訴你那個最重要的核心、第一個必須解決的是什麼</div>
+        <div>2. 內心掙扎：你個人面對這個問題的時候的內心想法和掙扎</div>
+        <div>3. 外部紛擾：目前外界有什麼影響著這件事情，或是環境有什麼干擾</div>
+        <div>4. 建議：建議你該怎麼去調整作法或心境，才能夠朝向想要的結果</div>
+        <div>5. 結果：若沒有照著建議進行，是以目前的狀況持續下去，會得到什麼結果</div>
       </div>
   </div>
 </div>

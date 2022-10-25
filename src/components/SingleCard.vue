@@ -1,23 +1,23 @@
 <template>
-  <div class="flex flex-col justify-center items-center" >
-    <p>{{title}}</p>
-      <div class="w-full h-full bg-transparent cursor-pointer group perspective" >
-        <div
-        :class="flipCard"
-        @click="flipClick"
-        >
-          <div class="absolute  backface-hidden w-full h-full ">
-            <div class=" flex flex-col items-center justify-center h-full text-gray-800 bg-[url('../src/assets/hxt9hEx.png')] bg-contain bg-no-repeat bg-center" >
-              <h1 class="font-semibold"></h1>
-            </div>
+  <div class="flex flex-col  justify-center items-center" >
+    <div class="h-20 md:h-10 font-light antialiased text-lg	">{{title}}</div>
+    <div class="w-full h-[15vh] md:h-[20vh] bg-transparent cursor-pointer group perspective" >
+      <div
+      :class="flipCard"
+      @click="flipClick"
+      >
+        <div class="absolute  backface-hidden w-full h-full ">
+          <div class=" flex flex-col items-center justify-center h-full text-gray-800 bg-[url('../src/assets/hxt9hEx.png')] bg-contain bg-no-repeat bg-top md:bg-center" >
+            <h1 class="font-semibold"></h1>
           </div>
-          <div class="absolute my-rotate-y-180 backface-hidden w-full h-full overflow-hidden">
-            <div class="flex flex-col items-center justify-center h-full text-gray-800 bg-[url('../src/assets/AXohsKP.png')] bg-contain bg-no-repeat bg-center" >
-              <p class="font-semibold w-20">{{selectedCard[index]}}</p>
-            </div>
+        </div>
+        <div class="absolute my-rotate-y-180 backface-hidden w-full h-full overflow-hidden">
+          <div class="flex flex-col items-center justify-center h-full text-gray-800 bg-[url('../src/assets/AXohsKP.png')] bg-contain bg-no-repeat bg-top md:bg-center" >
+            <p class="font-semibold w-20">{{selectedCard[index]}}</p>
           </div>
         </div>
       </div>
+    </div>
     </div>
 </template>
 
