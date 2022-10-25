@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col  justify-center items-center" >
-    <div class="h-20 md:h-10 font-light antialiased text-lg	">{{title}}</div>
+    <div class="h-20 md:h-10 w-20 md:w-[10vw] font-light antialiased md:text-lg	text-center">{{title}}</div>
     <div class="w-full h-[15vh] md:h-[20vh] bg-transparent cursor-pointer group perspective" >
       <div
       :class="flipCard"

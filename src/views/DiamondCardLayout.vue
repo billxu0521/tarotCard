@@ -1,6 +1,6 @@
 
 <template>
-<div class="pt-20 grid md:grid-flow-col-dense md:grid-cols-3 md:grid-rows-3 gap-4">
+<div class="md:pt-20 grid md:grid-flow-col-dense md:grid-cols-3 md:grid-rows-3 gap-4">
   <div class="col-span-1 md:row-span-3 md:col-span-2 ">
     <div class="grid grid-cols-3 gap-2 h-[80vh] ">
       <div></div>

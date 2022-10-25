@@ -1,6 +1,6 @@
 
 <template>
-<div class="pt-20 grid md:grid-flow-col-dense md:grid-cols-3 md:grid-rows-3 gap-4 ">
+<div class="md:pt-20 grid md:grid-flow-col-dense md:grid-cols-3 md:grid-rows-3 gap-4 ">
   <div class="md:row-span-3 md:col-span-2 overflow-auto">
     <div class="flex md:grid md:grid-cols-6 gap-2 h-[80vh] w-[80vw] md:w-[50vw]">
       <single-card class="min-w-[200px]" :filedtitle="'一個月後'" :sort="0"></single-card>
