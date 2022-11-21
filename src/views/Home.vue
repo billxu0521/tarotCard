@@ -128,7 +128,7 @@ export default defineComponent({
           <div  class="">
             <img class="w-40 pb-30" src="../assets/image-2-2.png" alt=""/>
           </div>
-          <div class="text-5xl mt-20 hover:text-[#FFDB72]" @click="goToPage('divination/timeflowcard')">時間之流</div>
+          <div class="text-5xl mt-20 hover:text-[#FFDB72] hover:cursor-pointer" @click="goToPage('divination/timeflowcard')">時間之流</div>
         </div>
         <div class="mx-10 sm:mx-10 md:40 text-left">
             <div class="my-5 text-2xl">想確定未來六個月內的狀況</div>

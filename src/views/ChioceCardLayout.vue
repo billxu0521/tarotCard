@@ -2,14 +2,14 @@
   <div class="md:pt-20 grid md:grid-flow-col-dense md:grid-cols-3 md:grid-rows-3 gap-4">
     <div class="col-span-1 md:row-span-3 md:col-span-2 ">
       <div class="grid grid-cols-3 gap-2 h-[80vh] ">
-        <single-card :filedtitle="'結果'" :sort="0"></single-card>
+        <single-card :filedtitle="'過程'" :sort="0"></single-card>
         <div ></div>
         <single-card :filedtitle="'過程'" :sort="1"></single-card>
         <single-card :filedtitle="'結果'" :sort="2"></single-card>
         <div></div>
-        <single-card :filedtitle="'過程'" :sort="3"></single-card>
+        <single-card :filedtitle="'結果'" :sort="3"></single-card>
         <div class="text-center">A.選項</div>
-        <single-card :filedtitle="'結果'" :sort="4"></single-card>
+        <single-card :filedtitle="'現在'" :sort="4"></single-card>
         <div class="text-center">B.選項</div>
       </div>
   
@@ -50,7 +50,6 @@ export default defineComponent({
     const data = reactive({
       selectedCard:[],
     });
-
     
     const selectSort = ref(0)
     const isOpen = ref(false)
@@ -66,8 +65,8 @@ export default defineComponent({
       for (let index = 0; index < 5; index++) {
         let seed = createSeed()
         let pickACard = state.currentCard[seed]
-        addSelectCard(pickACard.name,index)
-        setCurrentCard(pickACard.name)
+        addSelectCard(pickACard.image,index)
+        //setCurrentCard(pickACard.name)
         
       }
     }

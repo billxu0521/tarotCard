@@ -8,6 +8,7 @@ const state = reactive({
 const addSelectCard = (cardName,index) => {
   //(state.selectedCard).push(cardName)
   (state.selectedCard).splice(index, 1,cardName); 
+  console.log(state.selectedCard);
 };
 
 const setCurrentCard = (cardName) => {

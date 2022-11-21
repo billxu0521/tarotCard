@@ -69,8 +69,8 @@ export default defineComponent({
       for (let index = 0; index < 5; index++) {
         let seed = createSeed()
         let pickACard = state.currentCard[seed]
-        addSelectCard(pickACard.name,index)
-        setCurrentCard(pickACard.name)
+        addSelectCard(pickACard.image,index)
+        //setCurrentCard(pickACard.name)
         
       }
     }
