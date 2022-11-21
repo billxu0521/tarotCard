@@ -7,7 +7,7 @@
       @click="flipClick"
       >
         <div class="absolute  backface-hidden w-full h-full ">
-          <div class="flex flex-col items-center justify-center h-full text-gray-800 bg-[url('../src/assets/hxt9hEx.png')] bg-contain bg-no-repeat bg-top md:bg-center" >
+          <div class="flex flex-col items-center justify-center h-full text-gray-800 bg-[url('../src/assets/tarot/m10-wheel_of_fortune.jpg')] bg-contain bg-no-repeat bg-top md:bg-center" >
             <h1 class="font-semibold"></h1>
           </div>
         </div>
