@@ -7,12 +7,13 @@
       @click="flipClick"
       >
         <div class="absolute  backface-hidden w-full h-full ">
-          <div class="flex flex-col items-center justify-center h-full text-gray-800 bg-[url('../src/assets/tarot/m10-wheel_of_fortune.jpg')] bg-contain bg-no-repeat bg-top md:bg-center" >
+          <div class="flex flex-col items-center justify-center h-full text-gray-800 bg-[url('../src/assets/hxt9hEx.png')] bg-contain bg-no-repeat bg-top md:bg-center" >
             <h1 class="font-semibold"></h1>
           </div>
         </div>
         <div class="absolute my-rotate-y-180 backface-hidden w-full h-full overflow-hidden">
-          <div :style="`background-image:url(../src/assets/tarot/${selectedCard[index]}.jpg);`" class="flex flex-col items-center justify-center h-full text-gray-800 bg-contain bg-no-repeat bg-top md:bg-center" >
+          <div :style="`background-image:url(https://billxu0521.github.io/tarotCard/src/assets/tarot/${selectedCard[index]}.jpg);`" class="flex flex-col items-center justify-center h-full text-gray-800 bg-contain bg-no-repeat bg-top md:bg-center" >
+
             <!--p class="font-semibold w-20">{{selectedCard[index]}}</p-->
           </div>
         </div>
@@ -52,7 +53,6 @@ export default defineComponent({
       flipCard,
       flipClick
       };
-
     },
   methods: {
   },
