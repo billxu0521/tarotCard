@@ -93,10 +93,14 @@ export default defineComponent({
     </div>
   </div>
   <div class="container mx-auto md:container md:mx-auto sm:container sm:mx-auto h-min md:h-screen   grid grid-cols-1 md:grid-cols-2 gap-4 text-center " >
-      <div>
-        <div class="text-5xl mt-20 hover:text-[#FFDB72] hover:cursor-pointer" @click="goToPage('divination/chiocecard')">選擇牌陣</div>
+      <div >
+        <div class="m-auto max-w-fit" @click="goToPage('divination/chiocecard')">
+          <div class="bg-[#012966] text-white  border border-[#012966] rounded-[30px]  text-5xl px-2 mt-20 hover:text-[#FFDB72] hover:cursor-pointer">
+            選擇牌陣
+          </div>
+        </div>
         <div class="flex flex-row justify-around">
-          <div  class=" pb-30">
+          <div class=" pb-30">
             <img class="w-40 pb-30" src="../assets/image-2-1.png" alt=""/>
           </div>
           <div class="text-left">
@@ -110,8 +114,14 @@ export default defineComponent({
       </div>
       <div>
         <div class="flex flex-row justify-around">
-          <div class="text-5xl mt-20 hover:text-[#FFDB72] hover:cursor-pointer" @click="goToPage('divination/diamondcard')">鑽石牌陣</div>
-          <div  class=" ">
+          <div>
+            <div @click="goToPage('divination/diamondcard')">
+              <div class="bg-[#012966] text-white  border border-[#012966] rounded-[30px] m-auto text-5xl px-2 mt-20 hover:text-[#FFDB72] hover:cursor-pointer">
+                鑽石牌陣
+              </div>
+            </div>
+          </div>
+          <div>
             <img class="w-40" src="../assets/image-2-4.png" alt=""/>
           </div>
         </div>
@@ -128,7 +138,11 @@ export default defineComponent({
           <div  class="">
             <img class="w-40 pb-30" src="../assets/image-2-2.png" alt=""/>
           </div>
-          <div class="text-5xl mt-20 hover:text-[#FFDB72] hover:cursor-pointer" @click="goToPage('divination/timeflowcard')">時間之流</div>
+          <div @click="goToPage('divination/timeflowcard')">
+            <div class="bg-[#012966] text-white  border border-[#012966] rounded-[30px] m-auto text-5xl px-2 mt-20 hover:text-[#FFDB72] hover:cursor-pointer">
+              時間之流
+            </div>
+          </div>
         </div>
         <div class="mx-10 sm:mx-10 md:40 text-left">
             <div class="my-5 text-2xl">想確定未來六個月內的狀況</div>
@@ -138,19 +152,22 @@ export default defineComponent({
           </div>
       </div>
       <div class="flex flex-row justify-center my-20">
-        <div  class="">
-            <img class="w-40 " src="../assets/image-2-3.png" alt=""/>
+        <div>
+          <img class="w-40 " src="../assets/image-2-3.png" alt=""/>
+        </div>
+        <div class="">
+          <div class="m-auto max-w-fit"  @click="goToPage('divination/relationcard')">
+            <div class="bg-[#012966] text-white  border border-[#012966] rounded-[30px] m-auto text-5xl px-2 mt-20 hover:text-[#FFDB72] hover:cursor-pointer">
+              關係牌陣
+            </div>
           </div>
-          <div class="">
-            <div class="text-5xl mt-20 hover:text-[#FFDB72] hover:cursor-pointer" @click="goToPage('divination/relationcard')">關係牌陣</div>
-            <div class="ml-10 my-5 text-xl text-left ">
-              <div class="my-1">和人有關</div>
-              <div class="my-1">想知道對方怎麼看自己、</div>
-              <div class="my-1">和對方的未來發展</div>
-              <div class="my-1">包括戀愛、情侶、朋友、上司、認識的人等</div>
+          <div class="ml-10 my-5 text-xl text-left ">
+            <div class="my-1">和人有關</div>
+            <div class="my-1">想知道對方怎麼看自己、</div>
+            <div class="my-1">和對方的未來發展</div>
+            <div class="my-1">包括戀愛、情侶、朋友、上司、認識的人等</div>
           </div>
-          </div>
-        
+        </div>
       </div>
      
     </div>

@@ -13,7 +13,7 @@
     <img class="h-20 w-20 rotate-90" src="../assets/bg-2.png" alt=""/>
   </div>
   <div class="container  flex flex-col justify-between item-center mx-auto">
-    <div class="flex flex-col justify-center item-center mx-auto w-[40vw] text-xl h-screen ">
+    <div class="flex flex-col justify-center item-center mx-auto w-[60vw] text-xl h-screen ">
       <div class="text-gray-600" @click="scrollPageTo('select')">
         <p class="text-center">占卜前：</p>
         <p class="text-left">1. 占卜只有占與自己相關的事情才會準確
@@ -33,15 +33,15 @@
       <div class="flex flex-row justify-center p-10">
         <button
         @click="reDeal"
-          class="py-2 px-4 bg-transparent text-red-600 font-semibold border border-red-600 rounded hover:bg-red-600 hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 "
+          class="py-2 px-4 bg-transparent text-[#012966] font-semibold border border-[#012966] rounded hover:bg-[#012966] hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 "
         >重抽一次
         </button>
         <button
-            class="py-2 px-4 bg-transparent text-red-600 font-semibold border border-red-600 rounded hover:bg-red-600 hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 "
+          class="py-2 px-4 bg-transparent text-[#012966] font-semibold border border-[#012966] rounded hover:bg-[#012966] hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 "
           >若需個人化解讀服務，請洽塔羅占卜
         </button>
         <button
-            class="py-2 px-4 bg-transparent text-red-600 font-semibold border border-red-600 rounded hover:bg-red-600 hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 "
+          class="py-2 px-4 bg-transparent text-[#012966] font-semibold border border-[#012966] rounded hover:bg-[#012966] hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 "
             @click="goToPage('')"
           >回首頁
         </button>
